@@ -2,5 +2,8 @@
     <string name="app_name">MoneyTracker</string>
 
     <string name="hello">ПРИВЕТ ВИКА</string>
+    <string name="button">Кнопочка</string>
+    <string name="RUB">₽</string>
+    <string name="add_item_title">NEW</string>
 
 </resources>
