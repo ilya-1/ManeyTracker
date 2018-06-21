@@ -3,7 +3,8 @@
 
     <string name="hello">ПРИВЕТ ВИКА</string>
     <string name="button">Кнопочка</string>
-    <string name="RUB">₽</string>
+    <string name="RUB">%1$s ₽</string>
     <string name="add_item_title">NEW</string>
+    <string name="activity_item_list_title">Учет бюджета</string>
 
 </resources>

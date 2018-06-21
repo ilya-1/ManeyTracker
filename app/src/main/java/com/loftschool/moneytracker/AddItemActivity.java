@@ -29,6 +29,7 @@ public class AddItemActivity extends AppCompatActivity {
         price = findViewById(R.id.price);
         addBtn = ((Button) findViewById(R.id.add_btn));
 
+
         name.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -42,8 +43,28 @@ public class AddItemActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                String itemPrice = price.getText().toString();
 //                Log.d(TAG, "afterTextChanged: " + s);
-                addBtn.setEnabled(!TextUtils.isEmpty(s));
+                addBtn.setEnabled(!TextUtils.isEmpty(s) && !TextUtils.isEmpty(itemPrice));
+            }
+        });
+
+        price.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String itemName = name.getText().toString();
+                //                Log.d(TAG, "afterTextChanged: " + s);
+                addBtn.setEnabled(!TextUtils.isEmpty(s) && !TextUtils.isEmpty(itemName));
             }
         });
 
